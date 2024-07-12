@@ -10,9 +10,21 @@
   - Automate the deployment of grafana and prometheus to view the resources used such as cpu / memory / disk space etc..
   - Estimated time: 3-4hours.
   - Duration: 1week.
+## Solution plan
+
+- Same solution to kubeeas
+- Same solution to https://github.com/TimeBye/kubeadm-ha
+- Write a raw version
+
+
+
+
+
+
 
 ## Cluster Description
-- This version deploys a single-node cluster. If needed, it can be modified to a high-availability cluster.
+- Finally decide to write a version from scatch by myself. 
+- This version deploys a single-node cluster with kubeadmin. If needed, it can be modified to a high-availability cluster with k8s source.
 
 |Role	|Quantity	|Description
 |:-|:-|:-|
@@ -20,6 +32,52 @@
 |etcd Nodes	|1	|Note: reused as master nodes|
 |Master Nodes	|1	|A cluster with 1 master nodes|
 |Node Nodes	|2	|Nodes running application workloads; machine configuration can be upgraded/increased as needed|
+
+
+
+## How to use it
+
+- Prepare your running env. Now we setup with 1 master node and 2 worker nodes.
+- set up passwordless SSH login
+
+`$ sudo ssh-copy-id $IP `
+
+- Git clone this repo on master node. It also used as ansible runner.
+
+`$ git clone https://github.com/terrydevops/autok8s.git`
+
+- Install Ansible
+
+`$ sudo apt update`
+
+`$ sudo apt-get install ansible`
+
+`$ cd ./autok8s`
+
+- Change the IP list in roles/k8s/vars/main.yml
+
+`sudo ansible-playbook playbooks/setup_kubernetes.yml`
+
+
+## Todo list
+
+
+- Run ansible with runner 
+- Timezone Sync (chrony)
+- Test cases
+- Support HA with master node
+- Support HA with etcd
+- Support different network: calico, cilium, flannel, kube-ovn, kube-router
+- Upgrade/remove support
+- Build k8s from source code
+- Other requirements(kubernetes-sigs/metrics-server load-balancer docker runtime )
+
+
+
+
+
+
+  
 
 
 

@@ -1,0 +1,36 @@
+---
+- name: Prepare Kubernetes cluster Env
+  hosts: all
+  become: yes
+  roles:
+    - prepare
+
+- name: Install Kube components
+  hosts: all
+  become: yes
+  roles:
+    - kube-component
+
+- hosts:
+  - all
+  roles:
+  - containerd
+
+
+
+# - hosts:
+#   - k8s-master
+#   roles:
+#   - kube-master
+
+# - hosts:
+#   - k8s-master
+#   roles:
+#   - calico
+
+# - hosts:
+#   - k8s-nodes
+#   roles:
+#   - kube-nodes
+
+
