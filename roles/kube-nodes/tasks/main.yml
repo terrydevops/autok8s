@@ -27,6 +27,13 @@
   register: kubelet_conf_stat
 
 # - include_tasks: "{{ (role_path + '/../kube-master/tasks/kubeadm-config.yml') | realpath  }}"
+#- name: Copy kubeconfig to user's home
+  # copy:
+    #    src: /etc/kubernetes/kubeadm_join.sh
+      #    dest: /etc/kubernetes/kubeadm_join.sh
+      #    remote_src: yes
+- name: 分发添加节点脚本
+  copy: src=/etc/kubernetes/kubeadm_join.sh dest=/etc/kubernetes mode=0755
 
 - block:
   - name: 确认 kubelet 已停止运行
@@ -37,25 +44,9 @@
 
   - name: Worker 节点加入集群
     shell: >
-      kubeadm join --config /etc/kubernetes/kubeadm-config.yaml 
-      --ignore-preflight-errors=DirAvailable--etc-kubernetes-manifests,FileAvailable--etc-kubernetes-pki-ca.crt
+      bash -x /etc/kubernetes/kubeadm_join.sh
 
   when: 
   - not kubelet_conf_stat.stat.exists
 
-- block:
-  - name: 确认 kubelet 配置是否有修改
-    template:
-      src: kubelet-config.v1beta1.yaml.j2
-      dest: /var/lib/kubelet/config.yaml
-      owner: root
-      mode: 0644
-    register: configuration_result
-  
-  - name: 启动/重启 kubelet
-    service:
-      name: kubelet
-      state: restarted
-      enabled: yes
-    when: configuration_result.changed
 

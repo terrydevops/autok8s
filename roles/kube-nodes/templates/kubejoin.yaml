@@ -1,0 +1,14 @@
+apiVersion: kubeadm.k8s.io/v1beta3
+caCertPath: /etc/kubernetes/pki/ca.crt
+discovery:
+  bootstrapToken:
+    apiServerEndpoint: 172.31.20.15:6443
+    token: uom5hy.a4dz5m7ca0vtlquh
+    unsafeSkipCAVerification: true
+  timeout: 5m0s
+  tlsBootstrapToken: bfb87c9acc34f3de0dd3177e01ccc9ca061d2933157ec4b122dbd00d746da743
+kind: JoinConfiguration
+nodeRegistration:
+  criSocket: unix:///var/run/containerd/containerd.sock
+  imagePullPolicy: IfNotPresent
+

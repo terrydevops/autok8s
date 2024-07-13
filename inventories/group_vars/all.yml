@@ -1,14 +1,14 @@
 ---
-k8s_version: "1.30.0"
+k8s_version: "v1.28.11"
 calico_version: "v3.25.1"
 pod_network_cidr: "10.244.0.0/16"
 service_cidr: "10.96.0.0/12"
 kubelet_root_dir: "/var/lib/kubelet"
 
 # IP Addresses
-k8s_master_ip: "10.211.55.4"
-k8s_node1_ip: "10.211.55.5"
-k8s_node2_ip: "10.211.55.6"
+k8s_master_ip: "172.31.20.15"
+k8s_node1_ip: "172.31.22.59"
+k8s_node2_ip: "172.31.26.41"
 
 
 

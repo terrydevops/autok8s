@@ -33,4 +33,6 @@
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
 
-
+- name: 生成节点加入脚本
+  shell: |
+     kubeadm token create --print-join-command > /etc/kubernetes/kubeadm_join.sh
