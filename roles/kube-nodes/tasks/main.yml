@@ -45,7 +45,7 @@
   - name: Worker 节点加入集群
     shell: >
       bash -x /etc/kubernetes/kubeadm_join.sh
-
+    ignore_errors: no
   when: 
   - not kubelet_conf_stat.stat.exists
 

@@ -38,5 +38,14 @@
   roles:
   - kube-nodes
 
+- hosts:
+  - k8s-master
+  roles:
+  - cluster-addon
 
+
+- hosts:
+  - k8s-master
+  roles:
+  - example-nginx
 

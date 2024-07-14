@@ -1,0 +1,7 @@
+- name: install prometheus crd 
+  shell: kubectl apply --server-side -f  /root/autok8s/roles/cluster-addon/files/kube-prometheus/setup
+
+
+
+- name: install prometheus 
+  shell: kubectl apply -f /root/autok8s/roles/cluster-addon/files/kube-prometheus/
