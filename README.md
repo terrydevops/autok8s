@@ -53,6 +53,26 @@
 `sudo ansible-playbook playbooks/setup_kubernetes.yml`
 
 
+
+<img width="1237" alt="image" src="https://github.com/user-attachments/assets/cd6a0d1a-bf71-4d6b-9420-b4ebe87a4809">
+
+<img width="1459" alt="image" src="https://github.com/user-attachments/assets/c27aca6a-c17f-4886-b3fb-f54b7244f791">
+
+<img width="1051" alt="image" src="https://github.com/user-attachments/assets/2ebf1a84-4085-494c-bd48-194d13cc6d9a">
+
+<img width="507" alt="image" src="https://github.com/user-attachments/assets/10e98ce8-501a-4349-80cc-6a4d9c78dd9a">
+
+<img width="1171" alt="image" src="https://github.com/user-attachments/assets/438ab34e-b381-4706-8ff6-f0389fb7da52">
+
+<img width="1441" alt="image" src="https://github.com/user-attachments/assets/1f8b47e0-8a38-49d6-9ab8-1a2c7d1fba5d">
+
+
+
+http://54.90.137.176:30300/dashboards
+username:admin
+password:admin
+
+
 ## Todo list
 
 - Run ansible with runner 
