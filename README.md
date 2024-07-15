@@ -71,7 +71,7 @@ Cosmos
 
 
 
-For gaia-0 cpu/meme
+For gaia-0 cpu/memory
 <img width="1489" alt="image" src="https://github.com/user-attachments/assets/865ab2aa-440c-4390-9e18-d1498e3dbb44">
 
 
