@@ -60,25 +60,24 @@
 
 <img width="1051" alt="image" src="https://github.com/user-attachments/assets/2ebf1a84-4085-494c-bd48-194d13cc6d9a">
 
-<img width="507" alt="image" src="https://github.com/user-attachments/assets/10e98ce8-501a-4349-80cc-6a4d9c78dd9a">
+
 
 Cosmos is read once the ansible playbook done
 
 <img width="1112" alt="image" src="https://github.com/user-attachments/assets/6331e85a-29e0-4bfd-b41b-b3c8f6518d9c">
 
+<img width="507" alt="image" src="https://github.com/user-attachments/assets/10e98ce8-501a-4349-80cc-6a4d9c78dd9a">
 
+Grafana and prometheus
 
 <img width="1171" alt="image" src="https://github.com/user-attachments/assets/438ab34e-b381-4706-8ff6-f0389fb7da52">
 
 <img width="1441" alt="image" src="https://github.com/user-attachments/assets/1f8b47e0-8a38-49d6-9ab8-1a2c7d1fba5d">
 
-
-
-
 For gaia-0 cpu/memory
 <img width="1489" alt="image" src="https://github.com/user-attachments/assets/865ab2aa-440c-4390-9e18-d1498e3dbb44">
 
-
+Grafana dashboard
 http://54.90.137.176:30300/dashboards
 username:admin
 password:admin
