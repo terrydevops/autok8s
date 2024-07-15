@@ -14,7 +14,7 @@
 ## Solution plan
 - Use kubeadm kubectl kubelet
 - Install promethues
-- [k8s-cosmos-gaia](https://github.com/matteyu/k8s-cosmos-gaia)
+- [k8s-cosmos-gaia](https://github.com/cosmos/gaia/) | I build a gaia image.
 
 ## Cluster Description
 - This version deploys a single-node cluster with kubeadmin. If needed, it can be modified to a high-availability cluster with k8s source.
