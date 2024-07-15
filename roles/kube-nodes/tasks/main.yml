@@ -21,7 +21,7 @@
   - /etc/kubernetes
   - /usr/share/bash-completion/completions
 
-- name: 读取 kubelet.conf 文件 stat 信息
+- name: Read kubelet.conf stat info
   stat:
     path: /etc/kubernetes/kubelet.conf
   register: kubelet_conf_stat
@@ -36,13 +36,13 @@
   copy: src=/etc/kubernetes/kubeadm_join.sh dest=/etc/kubernetes mode=0755
 
 - block:
-  - name: 确认 kubelet 已停止运行
+  - name: Confirm kubelet stopped
     service:
       name: kubelet
       state: stopped
       enabled: yes
 
-  - name: Worker 节点加入集群
+  - name: Worker join cluster
     shell: >
       bash -x /etc/kubernetes/kubeadm_join.sh
     ignore_errors: no
