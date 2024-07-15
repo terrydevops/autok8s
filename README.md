@@ -62,10 +62,11 @@
 
 <img width="507" alt="image" src="https://github.com/user-attachments/assets/10e98ce8-501a-4349-80cc-6a4d9c78dd9a">
 
+<img width="1171" alt="image" src="https://github.com/user-attachments/assets/438ab34e-b381-4706-8ff6-f0389fb7da52">
 
-
-
-
+http://54.90.137.176:30300/dashboards
+username:admin
+password:admin
 
 
 ## Todo list
