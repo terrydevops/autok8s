@@ -23,8 +23,8 @@
 |:-|:-|:-|
 |Deployment Node	|1	|Runs ansible commands, reused as the first master node|
 |etcd Nodes	|1	|Note: reused as master nodes|
-|Master Nodes	|1	|A cluster with 1 master nodes|
-|Node Nodes	|2	|Nodes running application workloads; machine configuration can be upgraded/increased as needed|
+|Master Nodes	|1	|A cluster with 1 master nodes;4c8g;|
+|Node Nodes	|2	|Nodes running application workloads; machine configuration can be upgraded/increased as needed; 8c16g for cosmos|
 
 
 
@@ -66,6 +66,13 @@
 
 <img width="1441" alt="image" src="https://github.com/user-attachments/assets/1f8b47e0-8a38-49d6-9ab8-1a2c7d1fba5d">
 
+Cosmos
+<img width="1079" alt="image" src="https://github.com/user-attachments/assets/4484f63b-c47a-427b-b62b-974e3af11c9b">
+
+
+
+For gaia-0 cpu/meme
+<img width="1489" alt="image" src="https://github.com/user-attachments/assets/865ab2aa-440c-4390-9e18-d1498e3dbb44">
 
 
 http://54.90.137.176:30300/dashboards
@@ -83,7 +90,9 @@ password:admin
 - Support different network: calico, cilium, flannel, kube-ovn, kube-router
 - Upgrade/remove support
 - Build k8s from source code
+- Full env for cosmos peer to peer
 - Other requirements(kubernetes-sigs/metrics-server load-balancer docker runtime )
+  
 
 
 
