@@ -1,0 +1,10 @@
+- name: Copy cosmos-gaia to master node
+  ansible.builtin.copy:
+    src: files/statefulset.yaml
+    dest: "{{ k8s_apply_cosmos_file }}"
+    mode: '0644'
+
+- name: Apply cosmos-gaia
+  ansible.builtin.shell: |
+    kubectl apply -f {{ k8s_apply_cosmos_file }}/statefulset.yaml 
+  register: apply_output
