@@ -24,10 +24,10 @@ spec:
         image: larryannon/cosmos-gaia:v17.3.0
         resources:
           requests:
-            memory: "16Gi"
+            memory: "12Gi"
             cpu: "2"
           limits:
-            memory: "16Gi"
+            memory: "12Gi"
             cpu: "2"
         ports:
         - containerPort: 26656
