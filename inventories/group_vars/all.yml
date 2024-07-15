@@ -6,13 +6,13 @@ service_cidr: "10.96.0.0/12"
 kubelet_root_dir: "/var/lib/kubelet"
 
 # IP Addresses
-# k8s_master_ip: "172.31.39.163"
-# k8s_node1_ip: "172.31.42.104"
-# k8s_node2_ip: "172.31.36.40"
+k8s_master_ip: "172.31.39.163"
+k8s_node1_ip: "172.31.42.104"
+k8s_node2_ip: "172.31.36.40"
 
-k8s_master_ip: "10.211.55.10"
-k8s_node1_ip: "10.211.55.8"
-k8s_node2_ip: "10.211.55.9"
+# k8s_master_ip: "10.211.55.10"
+# k8s_node1_ip: "10.211.55.8"
+# k8s_node2_ip: "10.211.55.9"
 
 
 
