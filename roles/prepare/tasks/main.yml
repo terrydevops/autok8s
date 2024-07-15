@@ -53,6 +53,8 @@
 
     #- name: Sync time with time.windows.com
   #  command: ntpdate time.windows.com
+- name: enable br_netfilter
+  shell: "modprobe  br_netfilter"
 
 - name: Install basic package
   apt: 

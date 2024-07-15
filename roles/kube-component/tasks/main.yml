@@ -19,9 +19,9 @@
     - name: Install Kubernetes packages
       apt:
         name:
-          - kubelet
-          - kubeadm
-          - kubectl
+          - kubelet=1.28.2-1.1
+          - kubeadm=1.28.2-1.1
+          - kubectl=1.28.2-1.1
         state: present
 
     - name: Enable kubelet
