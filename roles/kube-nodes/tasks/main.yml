@@ -32,7 +32,7 @@
     #    src: /etc/kubernetes/kubeadm_join.sh
       #    dest: /etc/kubernetes/kubeadm_join.sh
       #    remote_src: yes
-- name: 分发添加节点脚本
+- name: kubeadm_join sh
   copy: src=/etc/kubernetes/kubeadm_join.sh dest=/etc/kubernetes mode=0755
 
 - block:
