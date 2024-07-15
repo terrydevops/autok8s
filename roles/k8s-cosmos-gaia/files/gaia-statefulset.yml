@@ -15,6 +15,10 @@ spec:
       labels:
         app: gaia
     spec:
+      volumes:
+        - name: task-pv-storage
+          persistentVolumeClaim:
+            claimName: task-cosmos-claim
       containers:
       - name: gaia
         image: larryannon/cosmos-gaia:v17.3.0
@@ -33,13 +37,13 @@ spec:
         - containerPort: 26660
           name: metrics
         volumeMounts:
-        - name: gaia-data
+        - name: task-pv-storage
           mountPath: /gaia/.gaia
-  volumeClaimTemplates:
-  - metadata:
-      name: gaia-data
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 10Gi
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: gaia-data
+  #   spec:
+  #     accessModes: ["ReadWriteOnce"]
+  #     resources:
+  #       requests:
+  #         storage: 10Gi
