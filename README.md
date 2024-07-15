@@ -64,7 +64,8 @@
 
 <img width="1171" alt="image" src="https://github.com/user-attachments/assets/438ab34e-b381-4706-8ff6-f0389fb7da52">
 
-![Uploading image.png…]()
+<img width="1441" alt="image" src="https://github.com/user-attachments/assets/1f8b47e0-8a38-49d6-9ab8-1a2c7d1fba5d">
+
 
 
 http://54.90.137.176:30300/dashboards
