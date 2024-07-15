@@ -10,6 +10,10 @@ k8s_master_ip: "172.31.39.163"
 k8s_node1_ip: "172.31.42.104"
 k8s_node2_ip: "172.31.36.40"
 
+# k8s_master_ip: "10.211.55.7"
+# k8s_node1_ip: "10.211.55.8"
+# k8s_node2_ip: "10.211.55.9"
+
 
 
 containerd_use_systemd_cgroup: "true"
@@ -53,5 +57,9 @@ wait_plugins_ready: trueku
 
 
 k8s_apply_calico_file: "~/.kube"
+
+k8s_apply_nginx_file: "~/.kube"
+
+k8s_apply_prometheus_file: "~/.kube"
 
 

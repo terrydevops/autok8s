@@ -1,7 +1,24 @@
-- name: install prometheus crd 
-  shell: kubectl apply --server-side -f  /root/autok8s/roles/cluster-addon/files/kube-prometheus/setup
+- name: Copy prometheus crd to master node
+  ansible.builtin.copy:
+    src: files/kube-prometheus/setup
+    dest: "{{ k8s_apply_prometheus_file }}"
+    mode: '0644'
+
+- name: Apply eprometheus crd
+  ansible.builtin.shell: |
+    kubectl apply --server-side -f {{ k8s_apply_prometheus_file }}/setup 
+  register: apply_output
 
 
+- name: Copy prometheus to master node
+  ansible.builtin.copy:
+    src: files/kube-prometheus/
+    dest: "{{ k8s_apply_prometheus_file }}/kube-prometheus"
+    mode: '0644'
 
-- name: install prometheus 
-  shell: kubectl apply -f /root/autok8s/roles/cluster-addon/files/kube-prometheus/
+- name: Apply eprometheus
+  ansible.builtin.shell: |
+    kubectl apply -f {{ k8s_apply_prometheus_file }}/kube-prometheus 
+  register: apply_output
+
+

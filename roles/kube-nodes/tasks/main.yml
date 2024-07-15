@@ -12,7 +12,7 @@
       containerd
       {%- endif -%}
 
-- name: 创建 kubernetes 相关目录
+- name: Create kubernetes folder
   file: 
     name: "{{ item }}"
     state: directory

@@ -10,20 +10,13 @@
   - Automate the deployment of grafana and prometheus to view the resources used such as cpu / memory / disk space etc..
   - Estimated time: 3-4hours.
   - Duration: 1week.
+
 ## Solution plan
-
-- Same solution to kubeeas
-- Same solution to https://github.com/TimeBye/kubeadm-ha
-- Write a raw version
-
-
-
-
-
-
+- Use kubeadm kubectl kubelet
+- Install promethues
+- k8s-cosmos-gaia
 
 ## Cluster Description
-- Finally decide to write a version from scatch by myself. 
 - This version deploys a single-node cluster with kubeadmin. If needed, it can be modified to a high-availability cluster with k8s source.
 
 |Role	|Quantity	|Description
@@ -38,7 +31,7 @@
 ## How to use it
 
 - Prepare your running env. Now we setup with 1 master node and 2 worker nodes.
-- set up passwordless SSH login
+- Set up passwordless SSH login
 
 `$ sudo ssh-copy-id $IP `
 
@@ -54,13 +47,13 @@
 
 `$ cd ./autok8s`
 
-- Change the IP list in roles/k8s/vars/main.yml
+- Change the IP list in inventories/group_vars/all.yml
+
 
 `sudo ansible-playbook playbooks/setup_kubernetes.yml`
 
 
 ## Todo list
-
 
 - Run ansible with runner 
 - Timezone Sync (chrony)

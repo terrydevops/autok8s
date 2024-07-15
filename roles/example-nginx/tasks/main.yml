@@ -1,2 +1,10 @@
-- name: install example nginx
-  shell: kubectl apply  -f  /root/autok8s/roles/example-nginx/files/example-nginx.yaml
+- name: Copy example nginx to master node
+  ansible.builtin.copy:
+    src: files/example-nginx.yaml
+    dest: "{{ k8s_apply_nginx_file }}"
+    mode: '0644'
+
+- name: Apply example nginx
+  ansible.builtin.shell: |
+    kubectl apply -f {{ k8s_apply_nginx_file }}/example-nginx.yaml 
+  register: apply_output
