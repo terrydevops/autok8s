@@ -10,8 +10,10 @@ metadata:
   name: alertmanager-main
   namespace: monitoring
 spec:
+  type: NodePort
   ports:
   - name: web
+    nodePort: 30993
     port: 9093
     targetPort: web
   - name: reloader-web
