@@ -64,6 +64,9 @@
 
 <img width="1171" alt="image" src="https://github.com/user-attachments/assets/438ab34e-b381-4706-8ff6-f0389fb7da52">
 
+![Uploading image.png…]()
+
+
 http://54.90.137.176:30300/dashboards
 username:admin
 password:admin
