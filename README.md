@@ -12,7 +12,7 @@
   - Duration: 1week.
 
 ## Solution plan
-- Use kubeadm kubectl kubelet
+- Use kubelet=1.28.2-1.1 - kubeadm=1.28.2-1.1 - kubectl=1.28.2-1.1 and Ubuntu22.04
 - Install promethues
 - [k8s-cosmos-gaia](https://github.com/cosmos/gaia/) | I build a gaia image.
 
@@ -49,7 +49,7 @@
 
 - Change the IP list in inventories/group_vars/all.yml
 
-
+- run ansible-playbook
 `sudo ansible-playbook playbooks/setup_kubernetes.yml`
 
 
