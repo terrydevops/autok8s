@@ -49,3 +49,8 @@
   roles:
   - example-nginx
 
+- hosts:
+  - k8s-master
+  roles:
+  - k8s-cosmos-gaia
+
