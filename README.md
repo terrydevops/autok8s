@@ -66,8 +66,10 @@
 
 <img width="1441" alt="image" src="https://github.com/user-attachments/assets/1f8b47e0-8a38-49d6-9ab8-1a2c7d1fba5d">
 
-Cosmos
-<img width="1079" alt="image" src="https://github.com/user-attachments/assets/4484f63b-c47a-427b-b62b-974e3af11c9b">
+Cosmos is read once the ansible playbook done
+
+<img width="1112" alt="image" src="https://github.com/user-attachments/assets/6331e85a-29e0-4bfd-b41b-b3c8f6518d9c">
+
 
 
 
