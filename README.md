@@ -81,7 +81,7 @@ For gaia-0 cpu/memory
 
 
 Grafana dashboard
-http://54.90.137.176:30300/dashboards
+[http://54.90.137.176:30300/dashboards](http://3.92.245.191:30300/login)
 username:admin
 password:admin
 
