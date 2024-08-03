@@ -6,19 +6,17 @@ service_cidr: "10.96.0.0/12"
 kubelet_root_dir: "/var/lib/kubelet"
 
 # IP Addresses
-k8s_master_ip: "172.31.39.163"
-k8s_node1_ip: "172.31.42.104"
-k8s_node2_ip: "172.31.36.40"
 
-# k8s_master_ip: "10.211.55.10"
-# k8s_node1_ip: "10.211.55.8"
-# k8s_node2_ip: "10.211.55.9"
+
+k8s_master_ip: "10.211.55.13"
+k8s_node1_ip: "10.211.55.15"
+k8s_node2_ip: "10.211.55.16"
 
 
 
 containerd_use_systemd_cgroup: "true"
 
-# 设置calico 网络 backend: brid, vxlan, none
+# Set calico network backend: brid, vxlan, none
 
 # Deploy Directory (kubeasz workspace)
 base_dir: "/root/autok8s"
@@ -31,14 +29,14 @@ calico_backend: bird
 calico_ipv4pool_ipip: "Always"
 # calico mtu
 calico_veth_mtu: 0
-# calico 相关镜像
+# calico images
 calico_cni_image: “docker.io/calico/cni:v3.28.0”
 calico_node_image: “docker.io/calico/node:v3.28.0”
 calico_typha_image: “docker.io/calico/typha:v3.28.0”
 calico_kube_controllers_image: "docker.io/calico/kube-controllers:v3.28.0"
-# calicoctl image 地址
+# calicoctl image 
 calicoctl_image: "docker.io/calico/ctl:v3.28.0"
-# 设置 Felix 日志级别(debug, info, warning, error)
+# Set Felix log level(debug, info, warning, error)
 calico_felix_log_level: "warning"
 
 kube_pod_subnet: "10.244.0.0/18"
